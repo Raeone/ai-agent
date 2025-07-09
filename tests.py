@@ -1,10 +1,15 @@
-from functions.write_file import write_file
+from functions.run_python_file import run_python_file
 
 def test():
-    print(write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum"))
-    print(write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"))
-    print(write_file("calculator", "/tmp/temp.txt", "this should not be allowed"))
-    
+    print("1.")
+    print(run_python_file("calculator", "main.py"))
+    print("2.")
+    print(run_python_file("calculator", "tests.py"))    
+    print("3.")
+    print(run_python_file("calculator", "../main.py"))
+    print("4.")
+    print(run_python_file("calculator", "nonexistent.py"))
     
 if __name__ == "__main__":
     test()
+
