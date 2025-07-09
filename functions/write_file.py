@@ -1,6 +1,17 @@
 import os
 
 def write_file(working_directory, file_path, content):
+  """Function for AI. It will open file and write content into file. Returns confirmation message.
+
+  Args:
+      working_directory (string): directory path
+      file_path (string): path
+      content (string): content which I want to update file with
+
+  Returns:
+      string: confirmation msg
+  """
+  
   abs_working_dir = os.path.abspath(working_directory)
   abs_file_path = os.path.abspath(os.path.join(abs_working_dir, file_path))
 
