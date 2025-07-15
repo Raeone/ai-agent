@@ -5,7 +5,7 @@ from call_function import call_function
 def test():
     arg = ''
     result = subprocess.run(
-        ["python3", "main.py", "what is content of calculator directory?"],
+        ["python3", "main.py", "what is content of calculator directory?" "--verbose"],
         capture_output=True,
         text=True,
     )
@@ -14,4 +14,3 @@ def test():
     
 if __name__ == "__main__":
     test()
-
